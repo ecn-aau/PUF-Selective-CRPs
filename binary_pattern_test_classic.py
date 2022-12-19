@@ -5,7 +5,7 @@ Created on Mon Nov 28 13:24:29 2022
 @author: Mieszko Ferens
 
 Script to run an experiment for modelling an XOR PUF that uses Binary-coded
-Shifted Patterns as CRPs during authentication with the server
+Shifted Patterns (BSP) as CRPs during authentication with the server
 """
 
 import argparse
