@@ -4,8 +4,8 @@ Created on Wed Nov 16 09:58:06 2022
 
 @author: Mieszko Ferens
 
-Script to run an experiment for modelling an Arbiter PUF that uses regular
-patterns as CRPs during authentication with the server
+Script to run an experiment for modelling an XOR PUF that uses Binary-coded
+with Padding (BP) CRPs patterns as CRPs during authentication with the server
 """
 
 import argparse
@@ -56,7 +56,7 @@ def main():
     parser.add_argument("--seed", type=int, default=0, help="Random seed.")
     parser.add_argument("--n-bits", type=int, default=64,
                         help="Challenge length in bits.")
-    parser.add_argument("--train-data", type=int, default=80000,
+    parser.add_argument("--train-data", type=int, default=160000,
                         help="Number of training data samples for the model.")
     parser.add_argument("--test-data", type=int, default=10000,
                         help="Number of testing data samples for the model.")
