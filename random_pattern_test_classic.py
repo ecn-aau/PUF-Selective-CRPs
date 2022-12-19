@@ -4,8 +4,8 @@ Created on Wed Nov  9 11:55:28 2022
 
 @author: Mieszko Ferens
 
-Script to run an experiment for modelling an Arbiter PUF that uses shifted
-random patterns as CRPs during authentication with the server
+Script to run an experiment for modelling an XOR PUF that uses Random
+Shifted Patterns (RSP) as CRPs during authentication with the server
 """
 
 import argparse
