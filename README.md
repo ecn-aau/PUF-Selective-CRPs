@@ -23,7 +23,7 @@ python3 binary_padded_test_classic.py
 python3 random_pattern_test_classic.py
 python3 binary_pattern_test_classic.py
 ```
-For parametric simulations use:
+For parametric simulations some examples are available with:
 ```
 python3 main.py
 ```
