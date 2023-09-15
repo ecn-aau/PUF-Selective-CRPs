@@ -5,7 +5,7 @@ on 4-XOR and 5-XOR PUFs respectively.
 
 ## How to cite
 
-M. Ferens, E. Dushku, and S. Kosta, "Zero added cost challenge-response exchange for PUF hardening against ML modeling attacks," 6 pages, *unpublished*.
+M. Ferens, E. Dushku and S. Kosta, "Securing PUFs Against ML Modeling Attacks via an Efficient Challenge-Response Approach," IEEE INFOCOM 2023 - IEEE Conference on Computer Communications Workshops (INFOCOM WKSHPS), Hoboken, NJ, USA, 2023, pp. 1-6, doi: 10.1109/INFOCOMWKSHPS57453.2023.10226062.
 
 ## Dependencies
 
