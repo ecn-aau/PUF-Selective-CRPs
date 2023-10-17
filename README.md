@@ -1,7 +1,15 @@
 # PUF-Selective-CRPs
 
-Code to test Improved Logistic Regression (LR) and Improved Multi-Layer Perceptron (MLP) modelling attacks
-on 4-XOR and 5-XOR PUFs respectively.
+Code to test Machine Learning (ML) modelling attacks on Arbiter-based PUFs when Selective CRPs are used.
+
+The supported PUF types are:
+ - k-XOR PUF
+ - Interpose PUF (IPUF)
+
+The supported ML algorithms are:
+ - Logistic Regression (LR)
+ - Multi-Layer Perceptron (MLP)
+ - Splitting attack (using LR or MLP) for IPUF
 
 ## How to cite
 
@@ -12,20 +20,42 @@ M. Ferens, E. Dushku, and S. Kosta, "Securing PUFs Against ML Modeling Attacks v
 The code was tested with the following:
 - Python 3.8
 - pypuf 3.2.1
+- tensorflow 2.4.4
 - numpy 1.23.4
 - pandas 1.5.1
 
 ## How to use
 
-To run single experiments use one of the following (use `--help` for a list of arguments):
+Keywords:
+ - "random": For Random Shifted Pattern (RSP) CRPs
+ - "regular": For Binary-coded with Padding (BP) CRPs
+ - "binary": For Binary Shifted Pattern (BSP) CRPs
+
+For traditional CRPs use the scripts designed for RSP CRPs, and set the pattern length equal to the challenge length (e.g., `--n-bits 64 --pattern-len 64`).
+
+To run single experiments for ML modelling attacks on an k-XOR PUF use one of the following (use `--help` for a list of arguments):
 ```
-python3 binary_padded_test_classic.py
 python3 random_pattern_test_classic.py
+python3 regular_pattern_test_classic.py
 python3 binary_pattern_test_classic.py
 ```
-For parametric simulations some examples are available with:
+To do so for an IPUF use one of the following (use `--help` for a list of arguments):
 ```
-python3 main.py
+python3 random_pattern_test_IPUF.py
+python3 regular_pattern_test_IPUF.py
+python3 binary_pattern_test_IPUF.py
+```
+To run single experiments for evaluating a distance metric on a k-XOR PUF use one of the following (use `--help` for a list of arguments):
+```
+python3 random_pattern_distance_test.py
+python3 regular_pattern_distance_test.py
+python3 binary_pattern_distance_test.py
+```
+This also calculates the uniformity of the PUF when the respective CRPs are used. However, is computationally costly. To obtain only the uniformity value much faster use on of the following (use `--help` for a list of arguments):
+```
+python3 random_pattern_unif_test.py
+python3 regular_pattern_unif_test.py
+python3 binary_pattern_unif_test.py
 ```
 
 ## References
