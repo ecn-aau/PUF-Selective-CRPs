@@ -3,6 +3,7 @@
 Code to test Machine Learning (ML) modelling attacks on Arbiter-based PUFs when Selective CRPs are used.
 
 The supported PUF types are:
+ - Arbiter PUF
  - k-XOR PUF
  - Interpose PUF (IPUF)
 
@@ -33,7 +34,7 @@ Keywords:
 
 For traditional CRPs use the scripts designed for RSP CRPs, and set the pattern length equal to the challenge length (e.g., `--n-bits 64 --pattern-len 64`).
 
-To run single experiments for ML modelling attacks on an k-XOR PUF use one of the following (use `--help` for a list of arguments):
+To run single experiments for ML modelling attacks on an k-XOR PUF (`--k 1` is an Arbiter PUF) use one of the following (use `--help` for a list of arguments):
 ```
 python3 random_pattern_test_classic.py
 python3 regular_pattern_test_classic.py
@@ -45,7 +46,7 @@ python3 random_pattern_test_IPUF.py
 python3 regular_pattern_test_IPUF.py
 python3 binary_pattern_test_IPUF.py
 ```
-To run single experiments for evaluating a distance metric on a k-XOR PUF use one of the following (use `--help` for a list of arguments):
+To run single experiments for evaluating a distance metric on a k-XOR PUF (`--k 1` is an Arbiter PUF) use one of the following (use `--help` for a list of arguments):
 ```
 python3 random_pattern_distance_test.py
 python3 regular_pattern_distance_test.py
@@ -57,6 +58,16 @@ python3 random_pattern_unif_test.py
 python3 regular_pattern_unif_test.py
 python3 binary_pattern_unif_test.py
 ```
+You may also evaluate the uniqueness or reliability of the PUF when the respective CRPs are used (use `--help` for a list of arguments):
+```
+python3 random_pattern_uniq_test.py
+python3 regular_pattern_uniq_test.py
+python3 binary_pattern_uniq_test.py
+python3 random_pattern_rel_test.py
+python3 regular_pattern_rel_test.py
+python3 binary_pattern_rel_test.py
+```
+Note that reliability is calculated based on a "noisiness" factor defined as `--noise`. A realistic value according to [3] is `--noise 0.1`. The reliability simulation scripts are intended to evaluate the effect of Selective CRPs compared to traditional ones, not to evaluate the real-life reliability of any given PUF.
 
 ## References
 
