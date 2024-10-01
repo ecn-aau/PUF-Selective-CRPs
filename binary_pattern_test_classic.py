@@ -97,7 +97,7 @@ def main():
                         help="Number of training data samples for the model.")
     parser.add_argument("--test-data", type=int, default=10000,
                         help="Number of testing data samples for the model.")
-    parser.add_argument("--ML-algorithm", type=str, default="DQN",
+    parser.add_argument("--ML-algorithm", type=str, default="LR",
                         help="ML algorithm to model the PUF with (LR or MLP).")
     args = parser.parse_args()
     
